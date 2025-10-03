@@ -88,3 +88,18 @@ result.data[i][j] = data[i * cols + j];
 }
 return result;
 }
+// Создание матрицы из одномерного массива
+double matrix_sum(Matrix m) {
+// Проверка на пустую матрицу
+if (m.data == nullptr || m.rows <= 0 || m.cols <= 0) {
+return 0.0;
+}
+double sum = 0.0;
+// Суммируем все элементы матрицы
+for (int i = 0; i < m.rows; i++) {
+for (int j = 0; j < m.cols; j++) {
+sum += m.data[i][j];
+}
+}
+return sum;
+}
